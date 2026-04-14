@@ -9,7 +9,7 @@ CSV_PATH = Path("data/raw/playersData.csv")
 SCHEMA_PATH = Path("createSchema.sql")
 
 
-#Base creation and scheme load from createSchema.sql.
+#Base creation and scheme load from createSchema.sql
 def init_db():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DB_PATH)

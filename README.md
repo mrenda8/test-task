@@ -149,7 +149,3 @@ presentation.pptx includes:
 - query results
 
 --------------------------------------------------
-
-TIME SPENT
-
-~12 hours

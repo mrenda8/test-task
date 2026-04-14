@@ -1050,30 +1050,30 @@ def upsert_player(conn, player, is_deceased=False, clear_current_club=False):
 
 
 # Saving scraped output in CSV format
-def save_scraped_csv(players, path):
-    path.parent.mkdir(parents=True, exist_ok=True)
+# def save_scraped_csv(players, path):
+#     path.parent.mkdir(parents=True, exist_ok=True)
 
-    fieldnames = [
-        "player_id",
-        "url",
-        "name",
-        "full_name",
-        "date_of_birth",
-        "age",
-        "place_of_birth",
-        "country_of_birth",
-        "positions",
-        "current_club",
-        "national_team",
-        "current_club_appearances",
-        "current_club_goals",
-        "scraping_timestamp",
-    ]
+#     fieldnames = [
+#         "player_id",
+#         "url",
+#         "name",
+#         "full_name",
+#         "date_of_birth",
+#         "age",
+#         "place_of_birth",
+#         "country_of_birth",
+#         "positions",
+#         "current_club",
+#         "national_team",
+#         "current_club_appearances",
+#         "current_club_goals",
+#         "scraping_timestamp",
+#     ]
 
-    with open(path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(players)
+#     with open(path, "w", encoding="utf-8", newline="") as f:
+#         writer = csv.DictWriter(f, fieldnames=fieldnames)
+#         writer.writeheader()
+#         writer.writerows(players)
 
 
 # -----------------------------------------------------------------------------
@@ -1142,7 +1142,7 @@ def main():
     print(f"Loaded {len(urls_from_players_data)} URLs from {PLAYERS_DATA_PATH}")
     print(f"Total unique URLs to scrape: {len(urls)}")
 
-    scraped_players = []
+    #scraped_players = []
     success_count = 0
     error_count = 0
     invalid_player_urls = set()
@@ -1157,7 +1157,7 @@ def main():
                 is_deceased=is_deceased,
                 clear_current_club=clear_current_club,
             )
-            scraped_players.append(player)
+            #scraped_players.append(player)
             success_count += 1
             print(f"[{index}/{len(urls)}] OK - {url}")
             time.sleep(0.1)
@@ -1178,7 +1178,7 @@ def main():
                     is_deceased=is_deceased,
                     clear_current_club=clear_current_club,
                 )
-                scraped_players.append(player)
+                #scraped_players.append(player)
                 success_count += 1
                 print(f"[{index}/{len(urls)}] OK AFTER RETRY - {url}")
                 time.sleep(1.0)

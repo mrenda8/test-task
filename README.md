@@ -100,7 +100,7 @@ DATA PIPELINE
 
 DATA CLEANING & DESIGN
 
-- filters non-player, category, list, and disambiguation pages
+- filters non-player, category, list and disambiguation pages
 - only association football players are included
 - player_id generated deterministically from URL
 - deceased players → age = NULL
@@ -140,7 +140,7 @@ SQL QUERIES
 
 --------------------------------------------------
 
-BONUS
+PRESENTATION
 
 presentation.pptx includes:
 - total players and clubs
@@ -152,4 +152,4 @@ presentation.pptx includes:
 
 TIME SPENT
 
-~10 hours
+~12 hours

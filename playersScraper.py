@@ -18,7 +18,7 @@ from transform import normalize_player_record
 DB_PATH = Path("data/db/players.sqlite")
 DEFAULT_URLS_PATH = Path("data/raw/playersURLs.csv")
 PLAYERS_DATA_PATH = Path("data/raw/playersData.csv")
-OUTPUT_PATH = Path("output/scraped_players.csv")
+#OUTPUT_PATH = Path("output/scraped_players.csv")
 SCHEMA_PATH = Path("createSchema.sql")
 
 
@@ -1196,11 +1196,11 @@ def main():
     cleanup_invalid_player_urls(conn, invalid_player_urls)
     conn.close()
 
-    save_scraped_csv(scraped_players, OUTPUT_PATH)
+    #save_scraped_csv(scraped_players, OUTPUT_PATH)
 
     print(f"Scraped successfully: {success_count}")
     print(f"Errors: {error_count}")
-    print(f"Saved CSV to: {OUTPUT_PATH}")
+    #print(f"Saved CSV to: {OUTPUT_PATH}")
     print(f"Updated database: {DB_PATH}")
 
 

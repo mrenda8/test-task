@@ -1,4 +1,4 @@
-C&I Data Engineer Task
+Wikipedia Football Pages Scraper
 
 This project implements a Python-based Wikipedia football player scraper.
 It imports the provided CSV data into SQLite, enriches player records using scraped data, and provides SQL queries for further analysis.
